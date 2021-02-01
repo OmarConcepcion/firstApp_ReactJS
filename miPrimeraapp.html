@@ -10,6 +10,15 @@
     <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 
-    
+    <script>
+        // Accedemos al contenedor del app
+        const contenedor = document.getElementById("app");
+
+        // Creamos un encabezado
+        const encabezado = React.createElement('h1', {}, 'Hola Mundo!');
+
+        // Renderizamos el encabezado dentro del contenedor
+        ReactDOM.render(encabezado, contenedor);
+    </script>
 </body>
 </html>
