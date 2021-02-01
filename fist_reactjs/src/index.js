@@ -1,17 +1,44 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import './scss/app.scss'
+// import './index.css';
+// import App from './App';
+// import reportWebVitals from './reportWebVitals';
+const nombre = 'Omar';
+const sesion  =  true;
+const pixeles = '60px'
+const pais = undefined;
+const JSX = (
+  <>
+  {sesion === true ? 
+    <> 
+      <h1 className="titulo" style={{color:'red', fontSize:pixeles}}>Hola {nombre}</h1>
+      <p>Interactuando con jsx en react</p>
+      {/* Si la variable pais está vacia, no imprime el fracmento de codigo JSX*/}
+      {pais && <p>Tu eres de: {pais}</p>}
+    </>
+    :
+    <p>NO Has iniciado sesion</p>}
+  </>
+  )
+
+// const verificarsesion = (sesion) => {
+//   if(sesion === true) {
+//     return JSX;
+//   } else {
+//     return <h1>No has iniciado sesion</h1>
+//   }
+// }
+
+
+// ReactDOM.render(
+//     verificarsesion(sesion)
+//   ,
+//   document.getElementById('root')
+// );
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+ JSX
+,
+document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
